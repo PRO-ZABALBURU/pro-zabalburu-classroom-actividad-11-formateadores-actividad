@@ -25,29 +25,29 @@ Además en la clase se deberá definir el siguiente método:
 
  
 
-pago() : Esta función retornará el pago mensual de la hipoteca. Este pago es el mismo todos los meses y se calcula según la siguiente fórmula (emplear la función pow de la clase Math):
+**pago()** : Esta función retornará el pago mensual de la hipoteca. Este pago es el mismo todos los meses y se calcula según la siguiente fórmula (emplear la función pow de la clase Math):
 
  
 
-pago = (Co * i) / (1 - (1 + i)-n)
+`pago = (Co * i) / (1 - (1 + i)-n)`
 
-C0 es el capital
-i es el interés mensual (el interés que tenemos dividido entre 12)
-n es el número de periodos (meses), por tanto años multiplicado por 12
+`C0` es el capital
+`i` es el interés mensual (el interés que tenemos dividido entre 12)
+`n` es el número de periodos (meses), por tanto años multiplicado por 12
  
 
 Se pide diseñar un programa que nos permita mostrar la tabla de amortización de un préstamo. Es decir cuánto se debe pagar cada periodo, cuanto se amortiza (qué parte del préstamo se paga) y cuánto se paga de intereses.
 
  
 
-El programa solicitará los datos de un préstamo. Para ello se empleará un formateador de números decimales para el capital, un formateador de tipo porcentaje (con dos decimales) para el interés anual y un formateador de fecha corta para la fecha de formalización del préstamo. Con esos datos se creará un objeto de tipo Prestamo.
+El programa solicitará los datos de un préstamo. Para ello se empleará un **formateador de números decimales** para el capital, un **formateador de tipo porcentaje** (con dos decimales) para el interés anual y un **formateador de fecha** corta para la fecha de formalización del préstamo. Con esos datos se creará un objeto de tipo `Prestamo`.
 
  
 
 Al final del proceso deberá mostrarse el siguiente cuadro de amortización :
 
  
-
+```console
 Periodo    Fecha       Capital     Pago        Amortización           Intereses
 
 1          fecha       capital     pago        amortización           intereses
@@ -59,23 +59,23 @@ Periodo    Fecha       Capital     Pago        Amortización           Intereses
 Total Pagado : sumaPagos
 
 Intereses Pagados : sumaIntereses
-
+```
  
 
 El proceso a realizar será el siguiente
 
-Guardamos en una variable llamada capital el capital inicial y en otra llamada fecha la fecha de formalización del préstamo
+- Guardamos en una variable llamada `capital` el capital inicial y en otra llamada `fecha` la fecha de formalización del préstamo
 
-Dado que el pago es fijo, conviene guardarlo en una variable
+- Dado que el pago es fijo, **conviene guardarlo en una variable**
 
-Repetimos el siguiente proceso tantas veces como periodos tenga el préstamo (empezando desde 1)
+- **Repetimos** el siguiente proceso **tantas veces como periodos** tenga el préstamo (empezando desde 1)
 
-Calculamos los intereses a pagar en el periodo (el capital multiplicado por el tipo de interés mensual (recordar dividirlo entre 12) )
+   - Calculamos los `intereses` a pagar en el periodo (el capital multiplicado por el tipo de interés mensual (recordar dividirlo entre 12) )
 
-Obtenemos la amortización (el pago menos los intereses)
+   - Obtenemos la `amortización` (el pago menos los intereses)
 
-Mostramos los datos por pantalla correctamente formateados
+   - **Mostramos** los datos por pantalla correctamente formateados
 
-Restamos la amortización del capital
+   - Restamos la `amortización` del `capital`
 
-Sumamos un mes más a la fecha
+   - Sumamos un `mes` más a la `fecha`
