@@ -13,7 +13,7 @@ La clase `Prestamo` dispondrá de los siguientes campos:
 
 - `años` : el número de años a los que se ha concedido el préstamo
 
-- `fecha` : la fecha de formalización del préstamo.
+- `fecha` : la fecha de formalización del préstamo. 
 
  
 
